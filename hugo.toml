@@ -1,3 +1,71 @@
 baseURL = 'https://priver.se/'
 languageCode = 'en-us'
 title = 'Emil Privér'
+theme = "hugo-blog-awesome"
+
+
+defaultContentLanguage = "en-gb"
+ignoreErrors = ["additional-script-loading-error"] # ignore error of loading additional scripts.
+
+[params]
+  toc = true
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://x.com/emil_priver"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "index.xml"
+
+[Languages.en-gb]
+  languageName = "English"
+  languageCode = "en-gb"
+  contentDir = "content/en"
+  weight = 1
+
+  [Languages.en-gb.menu]
+  [[Languages.en-gb.menu.main]]
+    # The page reference (pageRef) is useful for menu highlighting
+    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[Languages.en-gb.menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+  [[Languages.en-gb.menu.main]]
+    pageRef="about"
+    name = 'About'
+    url = '/about/'
+    weight = 30
+
+[Languages.en-gb.params]
+  sitename = "Awesome hugo blog"
+  defaultColor = "dark" # set color mode: dark, light, auto
+  description = "Minimal Hugo blog theme with light and dark mode support"
+  mainSections = ['posts']
+  toc = true # set to false to disable table of contents 'globally'
+  tocOpen = false # set to true to open table of contents by default
+  goToTop = true # set to false to disable 'go to top' button
+  additionalScripts = []
+  dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
+  rssFeedDescription = "summary" # available options: 1) summary 2) full
+
+[Languages.en-gb.params.author]
+  avatar = "me.png" # put the file in assets folder; also ensure that image has same height and width
+  intro = "Emil Privér"
+  name = "Emil Privér"
+  description = "TBA"
+
+# Allow to override webmanifest options
+[Languages.en-gb.params.webmanifest]
+  name = "sitename" # will use "params.sitename" or "title" by default
+  short_name = "sitename" # same as name
+  start_url = "/" # will use homepage url by default
+  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
+  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
+  display = "standalone"
