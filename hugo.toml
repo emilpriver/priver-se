@@ -1,7 +1,7 @@
 baseURL = 'https://priver.se/'
 languageCode = 'en-us'
 title = 'Emil Privér'
-theme = "hugo-blog-awesome"
+theme = "priver-se"
 
 
 defaultContentLanguage = "en-gb"
